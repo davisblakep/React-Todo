@@ -2,6 +2,7 @@ import React from 'react';
 
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList'
+import NavAppBar from './components/NavAppBar'
 
 const item = [
   {
@@ -65,10 +66,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="homePage-image">
+        <NavAppBar />
         <TodoForm addItem={this.addItem} />
         <TodoList item={this.state.item} toggleItem={this.toggleItem} clearCompleted={this.clearCompleted}  />
+        
       </div>
     );
   }
